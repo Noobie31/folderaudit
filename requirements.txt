@@ -1,0 +1,23 @@
+# Core dependencies
+Jinja2==3.1.4
+MarkupSafe==2.1.5
+
+# PDF generation (replaced WeasyPrint with reportlab - no external deps)
+reportlab==4.2.5
+Pillow==10.4.0
+
+# Scheduling
+APScheduler==3.10.4
+pytz==2024.2
+tzlocal==5.2
+
+# Email
+resend==2.4.0
+requests<3,>=2.32.5
+certifi==2024.8.30
+
+# Windows-only (for file owner info)
+pywin32==306; sys_platform == "win32"
+
+# PyInstaller for building EXE
+pyinstaller==6.11.1
