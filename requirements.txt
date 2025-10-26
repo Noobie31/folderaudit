@@ -1,23 +1,10 @@
-# Core dependencies
-Jinja2==3.1.4
-MarkupSafe==2.1.5
+# === Runtime dependencies (for development & execution) ===
+tkinterweb==4.7.0S       # embedded HTML/CSS preview
+fpdf2==2.7.9             # PDF generator
+watchdog==5.0.2          # auto-reload watcher
+pywin32==306             # Windows integration (optional but safe)
 
-# PDF generation (replaced WeasyPrint with reportlab - no external deps)
-reportlab==4.2.5
-Pillow==10.4.0
-
-# Scheduling
-APScheduler==3.10.4
-pytz==2024.2
-tzlocal==5.2
-
-# Email
-resend==2.4.0
-requests<3,>=2.32.5
-certifi==2024.8.30
-
-# Windows-only (for file owner info)
-pywin32==306; sys_platform == "win32"
-
-# PyInstaller for building EXE
-pyinstaller==6.11.1
+# === Build / packaging dependencies ===
+pyinstaller>=6.0         # build the EXE
+weasyprint>=61.0         # optional rich PDF engine
+schedule>=1.2.0          # optional background scheduler
